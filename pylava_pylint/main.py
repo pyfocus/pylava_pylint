@@ -45,7 +45,7 @@ class Linter(BaseLinter):
                 self.errors.append(dict(
                     lnum=msg.line,
                     col=msg.column,
-                    text="%s %s" % (msg.msg_id, msg.msg),
+                    text="%s (%s) %s" % (msg.msg_id, msg.symbol, msg.msg),
                     type=msg.msg_id[0]
                 ))
 
